@@ -6,6 +6,10 @@ import { checkSessionId } from "../middlewares/check-session-id"
 
 
 export async function transactionsRoutes(app: FastifyInstance) {
+    app.addHook('preHandler', async (req, res) => {
+        console.log(`[${req.method}] ${req.url}`)
+    })
+
     app.get(
         '/',
         { 
