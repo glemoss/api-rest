@@ -23,8 +23,9 @@ export async function transactionsRoutes(app: FastifyInstance) {
 
             return {
                 transactions
+            }
         }
-    })
+    )
 
     app.get(
         '/:id',
@@ -50,8 +51,9 @@ export async function transactionsRoutes(app: FastifyInstance) {
 
             return {
                 transaction
+            }
         }
-    })
+    )
 
     app.get(
         '/summary',
@@ -66,8 +68,9 @@ export async function transactionsRoutes(app: FastifyInstance) {
 
             return {
                 summary
+            }
         }
-    })
+    )
 
     app.post('/', async (req, res) => {
         
